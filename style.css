@@ -1,43 +1,50 @@
-
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos globales */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    margin: 0 auto;
     width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto; /* Centramos el body horizontalmente */
+    background-color: #f4f4f4;
 }
 
-
+/* Estilos del encabezado */
 header {
     background: #333;
     color: #fff;
     padding: 1rem 0;
     width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 header h1 {
     margin-left: 20px;
+    font-size: 24px;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
     margin-right: 20px;
+    flex-wrap: wrap;
 }
 
 header nav ul li {
@@ -46,9 +53,15 @@ header nav ul li {
 
 header nav ul li a {
     color: #fff;
-
+    text-decoration: none;
+    font-size: 16px;
 }
 
+header nav ul li a:hover {
+    color: #77aaff;
+}
+
+/* Estilos del contenido */
 .content {
     width: 100%;
     height: 100%;
@@ -56,84 +69,281 @@ header nav ul li a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20px 0;
 }
 
-.section{
+.section {
     padding: 2rem 0;
     text-align: center;
+    background: #fff;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
 }
 
-.section .container{
-    padding:  0 20px;
-   
+.section .container {
+    padding: 0 20px;
 }
 
-.profile-pic{
-
+/* Estilos de la imagen de perfil */
+.profile-pic {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     border: 3px solid #333;
-    margin: 20px o;
+    margin: 20px 0;
+    animation: heartbeat 1.5s infinite;
 }
 
-@keyframes hertbeat{
-    0%, 100%{
+@keyframes heartbeat {
+    0%, 100% {
         transform: scale(1);
     }
-    50%{
+    50% {
         transform: scale(1.1);
     }
 }
 
-.social-buttons{
+
+/* CSS para los proyectos */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-row {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.project-card {
+    width: calc(33.33% - 20px); /* Para tres columnas */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Ajusta la imagen dentro del contenedor */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.project-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.project-card .btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.project-card .btn:hover {
+    background-color: #555;
+}
+
+
+/* Estilos de los botones sociales */
+.social-buttons {
     margin-top: 20px;
 }
 
-.social-buttonsa{
-    margin:  0 10px;
+.social-buttons a {
+    margin: 0 10px;
     text-decoration: none;
-    color: #333;
+    color: #fff;
     padding: 10px 20px;
-    border: 1px solid #333;
-    transition: background 0.3s, color0.3s;
-
-
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.social-buttons a:hover{
-background: #333;
-color: #fff;
-
+.social-buttons a.twitter {
+    background-color: #1DA1F2;
 }
 
-footer{
+.social-buttons a.linkedin {
+    background-color: #0077B5;
+}
+
+.social-buttons a.github {
+    background-color: #333;
+}
+
+.social-buttons a:hover {
+    opacity: 0.8;
+}
+
+
+
+/* Estilos del pie de página */
+footer {
     background: #333;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    padding-bottom: 20px;
     width: 100%;
     margin-top: auto;
-
+    border-radius: 10px;
 }
 
-/* RESPONSIVE*/
+/* Estilos para la lista sin puntos */
+.section ul {
+    list-style: none;
+    padding: 0;
+}
 
-@media (max-width:768px){
-    header,.container{
-        flex-direction: column;
-    header nav ul {
-        flex-direction: column;
-        margin: 0;
+.section ul li {
+    padding: 5px 0;
+    font-size: 18px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 1200px) {
+    header h1 {
+        font-size: 22px;
+        margin-left: 10px;
     }
 
     header nav ul li {
-        margin: 10px 0;
-
+        margin-left: 15px;
     }
-    .content{
-        width: 100%;
+
+    header nav ul li a {
+        font-size: 15px;
+    }
+
+    .section {
+        padding: 1.5rem 0;
+    }
+
+    .section ul li {
+        font-size: 17px;
     }
 }
+
+@media (max-width: 992px) {
+    header h1 {
+        font-size: 20px;
+        margin-left: 5px;
+    }
+
+    header nav ul li {
+        margin-left: 10px;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 1rem 0;
+    }
+
+    .section ul li {
+        font-size: 16px;
+    }
+
+    .profile-pic {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        margin-left: 0;
+        font-size: 18px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0 0 0;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
+
+    .content {
+        padding: 10px 0;
+    }
+
+    .section {
+        padding: 0.5rem 0;
+    }
+
+    .section ul li {
+        font-size: 15px;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .social-buttons a {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    header h1 {
+        font-size: 16px;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header nav ul li {
+        margin: 5px;
+    }
+
+    header nav ul li a {
+        font-size: 13px;
+    }
+
+    .section ul li {
+        font-size: 14px;
+    }
+
+    .social-buttons a {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
 }

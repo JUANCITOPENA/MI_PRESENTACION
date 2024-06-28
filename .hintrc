@@ -3,7 +3,6 @@
     "development"
   ],
   "hints": {
-    "disown-opener": "off",
-    "axe/name-role-value": "off"
+    "disown-opener": "off"
   }
 }
