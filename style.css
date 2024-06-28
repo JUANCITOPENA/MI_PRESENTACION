@@ -1,0 +1,139 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Centramos el body horizontalmente */
+}
+
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin-left: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section{
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.section .container{
+    padding:  0 20px;
+   
+}
+
+.profile-pic{
+
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #333;
+    margin: 20px o;
+}
+
+@keyframes hertbeat{
+    0%, 100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+}
+
+.social-buttons{
+    margin-top: 20px;
+}
+
+.social-buttonsa{
+    margin:  0 10px;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    transition: background 0.3s, color0.3s;
+
+
+}
+
+.social-buttons a:hover{
+background: #333;
+color: #fff;
+
+}
+
+footer{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    padding-bottom: 20px;
+    width: 100%;
+    margin-top: auto;
+
+}
+
+/* RESPONSIVE*/
+
+@media (max-width:768px){
+    header,.container{
+        flex-direction: column;
+    header nav ul {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+
+    }
+    .content{
+        width: 100%;
+    }
+}
+}
